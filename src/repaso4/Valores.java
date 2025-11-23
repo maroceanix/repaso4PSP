@@ -21,19 +21,21 @@ public class Valores {
 				String strnum=brc.readLine();
 				int num=Integer.parseInt(strnum);
 				while(num!=0) {
-					bw.write(num);
+					bw.write(strnum);
 					bw.newLine();
 					bw.flush();
 					
-					strnum=br.readLine();
+					strnum=brc.readLine();
 					num=Integer.parseInt(strnum);
 				}
-					if(num==0) {
-						bw.write(num);
+			
+					bw.write("0");
+					bw.newLine();
+					bw.flush();
 						String linea;
 						while((linea=br.readLine())!=null) {
-							bw.write(linea);
-						}
+							System.out.println(linea);
+						
 					}
 					
 				

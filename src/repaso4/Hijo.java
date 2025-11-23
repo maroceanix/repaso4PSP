@@ -13,10 +13,12 @@ public class Hijo {
 		int cont=0;
 		int num=0;
 		String linea;
-		try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-			BufferedWriter bw=new BufferedWriter(new OutputStreamWriter(System.out));) {
+		try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in));) {
 				while((linea=br.readLine())!=null) {
 					num=Integer.parseInt(linea);
+					if(num==0) {
+						break;
+					}
 					media=media+num;
 					cont++;
 				}
@@ -26,7 +28,6 @@ public class Hijo {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 	}
 
 }
